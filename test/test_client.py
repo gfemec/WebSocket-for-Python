@@ -122,6 +122,7 @@ class BasicClientTest(unittest.TestCase):
             b"HTTP/1.1 101 Switching Protocols",
             b"Connection: Upgrade",
             b"Sec-Websocket-Version: 13",
+            b"Sec-Websocket-Protocol: http-only,chat",
             b"Content-Type: text/plain;charset=utf-8",
             b"Sec-Websocket-Accept: " + b64encode(sha1(c.key + WS_KEY).digest()),
             b"Upgrade: websocket",
